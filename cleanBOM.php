@@ -40,7 +40,9 @@ function recursiveFolder($directory, &$fileNames)
 
 function searchBOM($string)
 { 
-    if(substr($string,0,3) == pack("CCC",0xef,0xbb,0xbf)) return true;
+    if (substr($string,0,3) == pack("CCC",0xef,0xbb,0xbf)) {
+        return true;
+    }
     return false; 
 }
 ?>
